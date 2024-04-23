@@ -162,7 +162,7 @@ function App() {
       setTimeout(() => {}, 5000);
       const res = await axios({
         method: "POST",
-        url: "https://flask-server-disease.herokuapp.com/result",
+        url: "http://127.0.0.1:5000/result",
         data: {
           sym1: `${symptom1}`,
           sym2: `${symptom2}`,
@@ -891,9 +891,10 @@ function App() {
         <div className={classes.preBtn}>
           <button
             onClick={ShowDisease}
+            style={{justifyContent:"center",height:"max-content"}}
             className={`${classes.predict} ${classes.showBtn}`}
           >
-            Know About {data}
+            Prescription for {data}
           </button>
         </div>
       ) : (

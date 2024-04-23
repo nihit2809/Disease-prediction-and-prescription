@@ -2,6 +2,8 @@ from flask import Flask, request
 import numpy as np
 import pandas as pd
 from flask_cors import CORS
+import logging
+logging.basicConfig(level=logging.DEBUG)
 
 app = Flask(__name__)
 CORS(app)
@@ -41,7 +43,7 @@ def result():
 
     disease = ['Fungal infection', 'Allergy', 'GERD', 'Chronic cholestasis', 'Drug Reaction',
                'Peptic ulcer diseae', 'AIDS', 'Diabetes', 'Gastroenteritis', 'Bronchial Asthma', 'Hypertension',
-               ' Migraine', 'Cervical spondylosis',
+               'Migraine', 'Cervical spondylosis',
                'Paralysis (brain hemorrhage)', 'Jaundice', 'Malaria', 'Chicken pox', 'Dengue', 'Typhoid', 'hepatitis A',
                'Hepatitis B', 'Hepatitis C', 'Hepatitis D', 'Hepatitis E', 'Alcoholic hepatitis', 'Tuberculosis',
                'Common Cold', 'Pneumonia', 'Dimorphic hemmorhoids(piles)',
@@ -122,4 +124,4 @@ def result():
 
 
 if __name__ == "__main__":
-    app.run
+    app.run()
